@@ -24,6 +24,8 @@ const searchLocation = (event) => {
     axios.get(url).then((response) => {
       setData(response.data)
       console.log(response.data)
+    }).catch (function (error) {
+      alert(error.response.data.message)
     })
     setLocation('')
   }
